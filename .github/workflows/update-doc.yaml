@@ -15,7 +15,7 @@ jobs:
 
       - name: Update Docusaurus Docs
         run: |
-          git clone https://github.com/yourusername/sourcerepo.git newdocs
+          git clone https://github.com/VolodymyrZolotukhin/doc-repo.git newdocs
           cp -r newdocs/docs/* docs/
 
       - name: Commit and Push Changes
