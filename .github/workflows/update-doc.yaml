@@ -1,0 +1,27 @@
+name: Update Docusaurus
+
+on:
+  repository_dispatch:
+    types:
+      - update-docusaurus
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Update Docusaurus Docs
+        run: |
+          git clone https://github.com/yourusername/sourcerepo.git newdocs
+          cp -r newdocs/docs/* docs/
+
+      - name: Commit and Push Changes
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add docs
+          git commit -m "Update documentation"
+          git push origin main  # Or the branch you want to push to
