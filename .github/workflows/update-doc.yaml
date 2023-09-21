@@ -24,4 +24,4 @@ jobs:
           git config user.email "actions@github.com"
           git add docs
           git commit -m "Update documentation"
-          git push origin main  # Or the branch you want to push to
+          git push origin master
