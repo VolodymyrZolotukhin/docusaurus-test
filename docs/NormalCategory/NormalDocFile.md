@@ -1,0 +1,1 @@
+### This is normal doc file in normal category
